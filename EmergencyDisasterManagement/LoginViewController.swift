@@ -10,6 +10,7 @@ import UIKit
 import Parse
 class LoginViewController: UIViewController {
 
+    //This is an outlet for the username Textfield
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
     //This an outlet for the password textfield
