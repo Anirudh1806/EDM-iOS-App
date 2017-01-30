@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    //This function will define how much should the screen size be
+    //This function will define how much should the screen size be displayed
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
         
     }
     
+    //This function will define how much should the screen size be hidden
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             if view.frame.origin.y != 0 {
