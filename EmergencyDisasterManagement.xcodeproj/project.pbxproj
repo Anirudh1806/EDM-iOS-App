@@ -8,13 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		84079C131E38735200A428DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84079C121E38735200A428DE /* AppDelegate.swift */; };
-		84079C151E38735200A428DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84079C141E38735200A428DE /* ViewController.swift */; };
+		84079C151E38735200A428DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84079C141E38735200A428DE /* LoginViewController.swift */; };
 		84079C181E38735200A428DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84079C161E38735200A428DE /* Main.storyboard */; };
 		84079C1B1E38735200A428DE /* EmergencyDisasterManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84079C191E38735200A428DE /* EmergencyDisasterManagement.xcdatamodeld */; };
 		84079C1D1E38735200A428DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84079C1C1E38735200A428DE /* Assets.xcassets */; };
 		84079C201E38735200A428DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84079C1E1E38735200A428DE /* LaunchScreen.storyboard */; };
 		84079C2B1E38735200A428DE /* EmergencyDisasterManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84079C2A1E38735200A428DE /* EmergencyDisasterManagementTests.swift */; };
 		84079C361E38735200A428DE /* EmergencyDisasterManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84079C351E38735200A428DE /* EmergencyDisasterManagementUITests.swift */; };
+		843200321E3EB23B0064440C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200311E3EB23B0064440C /* MapKit.framework */; };
+		843200341E3EB2FC0064440C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200331E3EB2FC0064440C /* libsqlite3.tbd */; };
+		843200361E3EB30A0064440C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200351E3EB30A0064440C /* libz.tbd */; };
+		843200401E3EB3380064440C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200371E3EB3380064440C /* AudioToolbox.framework */; };
+		843200411E3EB3380064440C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200381E3EB3380064440C /* CFNetwork.framework */; };
+		843200421E3EB3380064440C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200391E3EB3380064440C /* CoreData.framework */; };
+		843200431E3EB3380064440C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003A1E3EB3380064440C /* CoreGraphics.framework */; };
+		843200441E3EB3380064440C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003B1E3EB3380064440C /* CoreLocation.framework */; };
+		843200451E3EB3380064440C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003C1E3EB3380064440C /* QuartzCore.framework */; };
+		843200461E3EB3380064440C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003D1E3EB3380064440C /* Security.framework */; };
+		843200471E3EB3380064440C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003E1E3EB3380064440C /* StoreKit.framework */; };
+		843200481E3EB3380064440C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003F1E3EB3380064440C /* SystemConfiguration.framework */; };
+		843200561E3EB5B10064440C /* Parse-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 843200551E3EB5B10064440C /* Parse-iOS */; };
+		843200581E3EB6510064440C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200571E3EB6510064440C /* Parse.framework */; };
+		8432005A1E3EB6610064440C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200591E3EB6610064440C /* Bolts.framework */; };
+		8432005C1E3EB9890064440C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432005B1E3EB9890064440C /* RegistrationViewController.swift */; };
+		8432005E1E3ECA850064440C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432005D1E3ECA850064440C /* UserViewController.swift */; };
+		843200601E3ECEE20064440C /* Gender Neutral User Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 8432005F1E3ECEE20064440C /* Gender Neutral User Filled-100.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +55,7 @@
 /* Begin PBXFileReference section */
 		84079C0F1E38735200A428DE /* EmergencyDisasterManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyDisasterManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84079C121E38735200A428DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84079C141E38735200A428DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84079C141E38735200A428DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84079C171E38735200A428DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84079C1A1E38735200A428DE /* EmergencyDisasterManagement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmergencyDisasterManagement.xcdatamodel; sourceTree = "<group>"; };
 		84079C1C1E38735200A428DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +67,24 @@
 		84079C311E38735200A428DE /* EmergencyDisasterManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmergencyDisasterManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84079C351E38735200A428DE /* EmergencyDisasterManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyDisasterManagementUITests.swift; sourceTree = "<group>"; };
 		84079C371E38735200A428DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843200311E3EB23B0064440C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		843200331E3EB2FC0064440C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		843200351E3EB30A0064440C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		843200371E3EB3380064440C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		843200381E3EB3380064440C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		843200391E3EB3380064440C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8432003A1E3EB3380064440C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8432003B1E3EB3380064440C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8432003C1E3EB3380064440C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8432003D1E3EB3380064440C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8432003E1E3EB3380064440C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8432003F1E3EB3380064440C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		843200551E3EB5B10064440C /* Parse-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Parse-iOS"; path = "../../../Downloads/Parse-iOS"; sourceTree = "<group>"; };
+		843200571E3EB6510064440C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		843200591E3EB6610064440C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		8432005B1E3EB9890064440C /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		8432005D1E3ECA850064440C /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		8432005F1E3ECEE20064440C /* Gender Neutral User Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gender Neutral User Filled-100.png"; path = "../Gender Neutral User Filled-100.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843200401E3EB3380064440C /* AudioToolbox.framework in Frameworks */,
+				843200411E3EB3380064440C /* CFNetwork.framework in Frameworks */,
+				843200421E3EB3380064440C /* CoreData.framework in Frameworks */,
+				843200431E3EB3380064440C /* CoreGraphics.framework in Frameworks */,
+				843200441E3EB3380064440C /* CoreLocation.framework in Frameworks */,
+				843200451E3EB3380064440C /* QuartzCore.framework in Frameworks */,
+				843200581E3EB6510064440C /* Parse.framework in Frameworks */,
+				843200461E3EB3380064440C /* Security.framework in Frameworks */,
+				843200471E3EB3380064440C /* StoreKit.framework in Frameworks */,
+				843200481E3EB3380064440C /* SystemConfiguration.framework in Frameworks */,
+				843200361E3EB30A0064440C /* libz.tbd in Frameworks */,
+				843200341E3EB2FC0064440C /* libsqlite3.tbd in Frameworks */,
+				843200321E3EB23B0064440C /* MapKit.framework in Frameworks */,
+				8432005A1E3EB6610064440C /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +129,21 @@
 		84079C061E38735100A428DE = {
 			isa = PBXGroup;
 			children = (
+				843200551E3EB5B10064440C /* Parse-iOS */,
+				843200371E3EB3380064440C /* AudioToolbox.framework */,
+				843200381E3EB3380064440C /* CFNetwork.framework */,
+				843200391E3EB3380064440C /* CoreData.framework */,
+				8432003A1E3EB3380064440C /* CoreGraphics.framework */,
+				8432003B1E3EB3380064440C /* CoreLocation.framework */,
+				8432003C1E3EB3380064440C /* QuartzCore.framework */,
+				8432003D1E3EB3380064440C /* Security.framework */,
+				8432003E1E3EB3380064440C /* StoreKit.framework */,
+				8432003F1E3EB3380064440C /* SystemConfiguration.framework */,
+				843200351E3EB30A0064440C /* libz.tbd */,
+				843200331E3EB2FC0064440C /* libsqlite3.tbd */,
+				843200591E3EB6610064440C /* Bolts.framework */,
+				843200571E3EB6510064440C /* Parse.framework */,
+				843200311E3EB23B0064440C /* MapKit.framework */,
 				84079C111E38735200A428DE /* EmergencyDisasterManagement */,
 				84079C291E38735200A428DE /* EmergencyDisasterManagementTests */,
 				84079C341E38735200A428DE /* EmergencyDisasterManagementUITests */,
@@ -100,9 +165,12 @@
 			isa = PBXGroup;
 			children = (
 				84079C121E38735200A428DE /* AppDelegate.swift */,
-				84079C141E38735200A428DE /* ViewController.swift */,
+				84079C141E38735200A428DE /* LoginViewController.swift */,
 				84079C161E38735200A428DE /* Main.storyboard */,
+				8432005D1E3ECA850064440C /* UserViewController.swift */,
+				8432005B1E3EB9890064440C /* RegistrationViewController.swift */,
 				84079C1C1E38735200A428DE /* Assets.xcassets */,
+				8432005F1E3ECEE20064440C /* Gender Neutral User Filled-100.png */,
 				84079C1E1E38735200A428DE /* LaunchScreen.storyboard */,
 				84079C211E38735200A428DE /* Info.plist */,
 				84079C191E38735200A428DE /* EmergencyDisasterManagement.xcdatamodeld */,
@@ -196,6 +264,7 @@
 				TargetAttributes = {
 					84079C0E1E38735200A428DE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7EFL56NPDD;
 					};
 					84079C251E38735200A428DE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -232,6 +301,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843200561E3EB5B10064440C /* Parse-iOS in Resources */,
+				843200601E3ECEE20064440C /* Gender Neutral User Filled-100.png in Resources */,
 				84079C201E38735200A428DE /* LaunchScreen.storyboard in Resources */,
 				84079C1D1E38735200A428DE /* Assets.xcassets in Resources */,
 				84079C181E38735200A428DE /* Main.storyboard in Resources */,
@@ -259,8 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84079C151E38735200A428DE /* ViewController.swift in Sources */,
+				84079C151E38735200A428DE /* LoginViewController.swift in Sources */,
+				8432005E1E3ECA850064440C /* UserViewController.swift in Sources */,
 				84079C131E38735200A428DE /* AppDelegate.swift in Sources */,
+				8432005C1E3EB9890064440C /* RegistrationViewController.swift in Sources */,
 				84079C1B1E38735200A428DE /* EmergencyDisasterManagement.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,10 +478,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EmergencyDisasterManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.EmergencyDisasterManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -416,10 +496,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EmergencyDisasterManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.EmergencyDisasterManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -488,6 +575,7 @@
 				84079C3C1E38735200A428DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84079C3D1E38735200A428DE /* Build configuration list for PBXNativeTarget "EmergencyDisasterManagementTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +584,7 @@
 				84079C3F1E38735200A428DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84079C401E38735200A428DE /* Build configuration list for PBXNativeTarget "EmergencyDisasterManagementUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +593,7 @@
 				84079C421E38735200A428DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
