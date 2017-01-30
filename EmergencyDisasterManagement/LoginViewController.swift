@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+//This function will perform a segue upon entering valid username and password
     @IBAction func LoginViewController(sender: AnyObject) {
         PFUser.logInWithUsernameInBackground(userNameTF.text!, password: passwordTF.text!) {
             user, error in
