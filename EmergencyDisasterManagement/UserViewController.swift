@@ -60,6 +60,7 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         userFullNameLBL.text = PFUser.currentUser()?.username
     }
 
+    //This function will allow user to access gallery and upload a picture
     @IBAction func profilePictureTapped(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
         
