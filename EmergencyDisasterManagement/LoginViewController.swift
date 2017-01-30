@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
-
+    //This an outlet for the password textfield
     @IBOutlet weak var passwordTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
