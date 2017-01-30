@@ -15,7 +15,7 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    // Outlets for the Registration View Controller.
+    
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
