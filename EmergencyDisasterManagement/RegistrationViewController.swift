@@ -15,7 +15,7 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
+    //Created the references for the outlets in the view
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
