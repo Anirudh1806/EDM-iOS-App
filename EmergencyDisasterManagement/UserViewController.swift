@@ -37,6 +37,7 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 }
             }
         } else {
+            //This part is to default image when the user doesnot select any
             let image = UIImage(named: "DefaultImage")
             let imageData = UIImagePNGRepresentation(image!)
             let imageFile = PFFile(name: user.username, data: imageData!)
