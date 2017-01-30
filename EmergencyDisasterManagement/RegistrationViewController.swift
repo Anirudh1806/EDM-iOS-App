@@ -27,7 +27,6 @@ class RegistrationViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // This function is called once the user taps on the signUp button. This function registers a user.
