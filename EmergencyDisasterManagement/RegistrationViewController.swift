@@ -29,7 +29,7 @@ class RegistrationViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // This function is called once the user taps on the signUp button. This function registers a user.
+    // This function is called once the user taps on the signUp button. This function registers a user
     @IBAction func signUpBTN(sender: AnyObject) {
         let user = PFUser()
         
