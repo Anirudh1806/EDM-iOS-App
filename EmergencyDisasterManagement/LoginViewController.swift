@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // Function that displays an Alert Message with the passed in title and message.
+    // Function that displays an Alert Message with the passed in title and message
     func displayAlertWithTitle(title:String, message:String){
         let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let defaultAction:UIAlertAction =  UIAlertAction(title: "OK", style: .Default, handler: nil)
