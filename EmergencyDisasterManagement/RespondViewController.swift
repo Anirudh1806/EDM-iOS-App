@@ -42,7 +42,6 @@ class RespondViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         })
     }
 
-    //Function to fetch user's current location
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]){
         print("hello")
         let location1 = locations.last
