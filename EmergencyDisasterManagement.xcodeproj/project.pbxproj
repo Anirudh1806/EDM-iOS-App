@@ -27,12 +27,14 @@
 		843200461E3EB3380064440C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003D1E3EB3380064440C /* Security.framework */; };
 		843200471E3EB3380064440C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003E1E3EB3380064440C /* StoreKit.framework */; };
 		843200481E3EB3380064440C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8432003F1E3EB3380064440C /* SystemConfiguration.framework */; };
-		843200561E3EB5B10064440C /* Parse-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 843200551E3EB5B10064440C /* Parse-iOS */; };
 		843200581E3EB6510064440C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200571E3EB6510064440C /* Parse.framework */; };
 		8432005A1E3EB6610064440C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843200591E3EB6610064440C /* Bolts.framework */; };
 		8432005C1E3EB9890064440C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432005B1E3EB9890064440C /* RegistrationViewController.swift */; };
 		8432005E1E3ECA850064440C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432005D1E3ECA850064440C /* UserViewController.swift */; };
 		843200601E3ECEE20064440C /* Gender Neutral User Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 8432005F1E3ECEE20064440C /* Gender Neutral User Filled-100.png */; };
+		8492493F1E4AC24500111FF7 /* Parse-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 8492493E1E4AC24500111FF7 /* Parse-iOS */; };
+		849249411E4AC53A00111FF7 /* Disaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849249401E4AC53A00111FF7 /* Disaster.swift */; };
+		849376611E4AAC24005D47B2 /* RespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849376601E4AAC24005D47B2 /* RespondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,12 +81,14 @@
 		8432003D1E3EB3380064440C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8432003E1E3EB3380064440C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8432003F1E3EB3380064440C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		843200551E3EB5B10064440C /* Parse-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Parse-iOS"; path = "../../../Downloads/Parse-iOS"; sourceTree = "<group>"; };
 		843200571E3EB6510064440C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		843200591E3EB6610064440C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8432005B1E3EB9890064440C /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		8432005D1E3ECA850064440C /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8432005F1E3ECEE20064440C /* Gender Neutral User Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gender Neutral User Filled-100.png"; path = "../Gender Neutral User Filled-100.png"; sourceTree = "<group>"; };
+		8492493E1E4AC24500111FF7 /* Parse-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Parse-iOS"; sourceTree = "<group>"; };
+		849249401E4AC53A00111FF7 /* Disaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disaster.swift; sourceTree = "<group>"; };
+		849376601E4AAC24005D47B2 /* RespondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RespondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +133,7 @@
 		84079C061E38735100A428DE = {
 			isa = PBXGroup;
 			children = (
-				843200551E3EB5B10064440C /* Parse-iOS */,
+				8492493E1E4AC24500111FF7 /* Parse-iOS */,
 				843200371E3EB3380064440C /* AudioToolbox.framework */,
 				843200381E3EB3380064440C /* CFNetwork.framework */,
 				843200391E3EB3380064440C /* CoreData.framework */,
@@ -166,7 +170,9 @@
 			children = (
 				84079C121E38735200A428DE /* AppDelegate.swift */,
 				84079C141E38735200A428DE /* LoginViewController.swift */,
+				849249401E4AC53A00111FF7 /* Disaster.swift */,
 				84079C161E38735200A428DE /* Main.storyboard */,
+				849376601E4AAC24005D47B2 /* RespondViewController.swift */,
 				8432005D1E3ECA850064440C /* UserViewController.swift */,
 				8432005B1E3EB9890064440C /* RegistrationViewController.swift */,
 				84079C1C1E38735200A428DE /* Assets.xcassets */,
@@ -301,7 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843200561E3EB5B10064440C /* Parse-iOS in Resources */,
+				8492493F1E4AC24500111FF7 /* Parse-iOS in Resources */,
 				843200601E3ECEE20064440C /* Gender Neutral User Filled-100.png in Resources */,
 				84079C201E38735200A428DE /* LaunchScreen.storyboard in Resources */,
 				84079C1D1E38735200A428DE /* Assets.xcassets in Resources */,
@@ -330,7 +336,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849376611E4AAC24005D47B2 /* RespondViewController.swift in Sources */,
 				84079C151E38735200A428DE /* LoginViewController.swift in Sources */,
+				849249411E4AC53A00111FF7 /* Disaster.swift in Sources */,
 				8432005E1E3ECA850064440C /* UserViewController.swift in Sources */,
 				84079C131E38735200A428DE /* AppDelegate.swift in Sources */,
 				8432005C1E3EB9890064440C /* RegistrationViewController.swift in Sources */,
