@@ -70,6 +70,14 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.presentViewController(imagePicker, animated: true, completion: nil)
 
     }
+    @IBAction func profilePictureTappedd(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        
+        imagePicker.delegate = self
+        imagePicker.sourceType = .PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
     
     // This function tell what should be done once the user is done picking an image. This basically get the image and saves it in the backend to be retrieved later.
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
