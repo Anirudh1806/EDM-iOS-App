@@ -41,25 +41,7 @@ class RespondViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         })
     }
-    
-    @IBAction func reportDisasters(sender: AnyObject){
-        victimNumbers = (numberOfVictims.text?.componentsSeparatedByString(","))!
-        let username = "\((PFUser.currentUser()?.username)!)"
-        print(username)
-        let newDisaster = Disaster(userName: username, blackVictims: Int(victimNumbers[0])!, redVictims: Int(victimNumbers[1])!, yellowVictims: Int(victimNumbers[2])!, greenVictims: Int(victimNumbers[3])!, levelOfImpact: levelOfImpact, comments: commentsTF.text)
-        newDisaster.location = location
-        newDisaster.saveInBackgroundWithBlock({ (success, error) -> Void in
-            if success {
-                print("Successfully saved Rating for room No:")
-            } else {
-                
-                if let error = error {
-                    print("Something terrible happened. Something like \(error.localizedDescription)")
-                }
-            }
-        })
-    }
-    
+
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]){
         print("hello")
         let location1 = locations.last
@@ -68,6 +50,7 @@ class RespondViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         location.append(locationValue.latitude)
         location.append(locationValue.longitude)
     }
+  
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print(error)
