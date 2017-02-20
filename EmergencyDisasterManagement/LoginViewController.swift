@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
 //This function will perform a segue upon entering valid username and password
     @IBAction func LoginViewController(sender: AnyObject) {
