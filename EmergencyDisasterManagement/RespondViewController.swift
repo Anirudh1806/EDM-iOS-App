@@ -89,6 +89,7 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
     }
     
+    
     // This function tell what should be done once the user is done picking an image. This basically get the image and saves it in the backend to be retrieved later.
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
