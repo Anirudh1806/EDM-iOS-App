@@ -78,6 +78,7 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return impactLevel[row]
+
     }
     
     @IBAction func uploadImage(sender: AnyObject) {
