@@ -10,6 +10,7 @@ import UIKit
 import Parse
 class LoginViewController: UIViewController {
 
+    var timestamp:String!
     //This is an outlet for the username Textfield.
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
@@ -49,10 +50,10 @@ class LoginViewController: UIViewController {
         
     }
     func getTimestamp() {
-        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
     }
     
-    //This function will define how much should the screen size be hidden
+    //This function will define how much should the screen size behidden
+    //.
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             if view.frame.origin.y != 0 {
@@ -74,10 +75,10 @@ class LoginViewController: UIViewController {
             user, error in
             if user != nil {
                 self.performSegueWithIdentifier("LoginSuccessful", sender: self)
-                let user =  PFUser.currentUser()
-                
-                user!["SesionLogin"] = getTimestamp() as! NSDate
-                user!.saveInBackgroundWithBlock({(success,error)->Void in
+                self.timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+                let user =  UserDetails()
+                user.sesionLogin = self.timestamp
+                user.saveInBackgroundWithBlock({(success,error)->Void in
                     if error != nil {
                         print("Something has gone wrong saving in background: \(error)")
                     } else {

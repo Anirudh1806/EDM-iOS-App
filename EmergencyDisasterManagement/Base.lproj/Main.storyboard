@@ -251,6 +251,7 @@
                                     <color key="titleColor" red="1" green="0.29563868450000003" blue="0.27263161470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="logOutBTN:" destination="hv7-bn-0Kl" eventType="touchUpInside" id="TPx-EI-Cjw"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="iCT-It-6yd"/>
                                 </connections>
                             </button>
@@ -1719,7 +1720,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="iCT-It-6yd"/>
         <segue reference="PVn-zZ-qep"/>
-        <segue reference="I7v-f1-kLM"/>
     </inferredMetricsTieBreakers>
 </document>

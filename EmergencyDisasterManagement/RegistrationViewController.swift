@@ -38,11 +38,6 @@ class RegistrationViewController: UIViewController {
         user.email = emailTF.text!
         
         
-        let image = UIImage(named: "DefaultImage")
-       // let imageData = UIImagePNGRepresentation(image!)
-       // let imageFile = PFFile(name: userNameTF.text!, data: imageData!)
-        
-       // user["image"] = imageFile
         user.signUpInBackgroundWithBlock {
             succeded, error in
             if succeded {

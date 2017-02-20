@@ -35,6 +35,7 @@
 		8492493F1E4AC24500111FF7 /* Parse-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 8492493E1E4AC24500111FF7 /* Parse-iOS */; };
 		849249411E4AC53A00111FF7 /* Disaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849249401E4AC53A00111FF7 /* Disaster.swift */; };
 		849376611E4AAC24005D47B2 /* RespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849376601E4AAC24005D47B2 /* RespondViewController.swift */; };
+		84BCBAF11E5AA7590054517E /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCBAF01E5AA7590054517E /* UserDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		8492493E1E4AC24500111FF7 /* Parse-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Parse-iOS"; sourceTree = "<group>"; };
 		849249401E4AC53A00111FF7 /* Disaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disaster.swift; sourceTree = "<group>"; };
 		849376601E4AAC24005D47B2 /* RespondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RespondViewController.swift; sourceTree = "<group>"; };
+		84BCBAF01E5AA7590054517E /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				84079C121E38735200A428DE /* AppDelegate.swift */,
 				84079C141E38735200A428DE /* LoginViewController.swift */,
+				84BCBAF01E5AA7590054517E /* UserDetails.swift */,
 				849249401E4AC53A00111FF7 /* Disaster.swift */,
 				84079C161E38735200A428DE /* Main.storyboard */,
 				849376601E4AAC24005D47B2 /* RespondViewController.swift */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849376611E4AAC24005D47B2 /* RespondViewController.swift in Sources */,
+				84BCBAF11E5AA7590054517E /* UserDetails.swift in Sources */,
 				84079C151E38735200A428DE /* LoginViewController.swift in Sources */,
 				849249411E4AC53A00111FF7 /* Disaster.swift in Sources */,
 				8432005E1E3ECA850064440C /* UserViewController.swift in Sources */,

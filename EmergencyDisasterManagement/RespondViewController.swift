@@ -97,7 +97,6 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
         self.dismissViewControllerAnimated(true, completion: nil)
 
         victimNumbers = (numberOfVictims.text?.componentsSeparatedByString(","))!
-        print(location)
         let username = "\((PFUser.currentUser()?.username)!)"
         let newDisaster = Disaster(userName: username, blackVictims: Int(victimNumbers[0])!, redVictims: Int(victimNumbers[1])!, yellowVictims: Int(victimNumbers[2])!, greenVictims: Int(victimNumbers[3])!, levelOfImpact: levelOfImpact, comments: commentsTF.text)
         newDisaster.image = imageFile

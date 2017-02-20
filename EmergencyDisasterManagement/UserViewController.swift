@@ -15,9 +15,22 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var userProfileIV: UIImageView!
 
     
-    func getTimestamp() {
+    @IBAction func logOutBTN(sender: AnyObject) {
         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        print(timestamp)
+        //let time = LoginViewController.timestamp
+        let user =  UserDetails()
+        user.sessionLogout = timestamp
+        user.saveInBackgroundWithBlock({(success,error)->Void in
+            if error != nil {
+                print("Something has gone wrong saving in background: \(error)")
+            } else {
+                print("Success while saving")
+            }
+        })
+        
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -91,14 +104,5 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
