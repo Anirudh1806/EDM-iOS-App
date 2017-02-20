@@ -18,6 +18,7 @@ class Disaster:PFObject {
     @NSManaged var location:[Double]!
     @NSManaged var levelOfImpact:String!
     @NSManaged var comments:String!
+    @NSManaged var image:PFFile!
 
     
     init(userName:String,blackVictims:Int,redVictims:Int,yellowVictims:Int,greenVictims:Int,levelOfImpact:String,comments:String) {

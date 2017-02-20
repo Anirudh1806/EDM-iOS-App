@@ -10,45 +10,33 @@ import UIKit
 import Parse
 import MapKit
 import CoreLocation
-class RespondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
+class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
     let impactLevel:[String] = ["Low", "Medium","High"]
     let changeColor = "Black,Red,Yellow,Green"
-    var victimNumbers:[String] = []
+    var victimNumbers:[String] = ["11","12","13","14"]
     var levelOfImpact:String = ""
     var location:[Double] = []
-
-   // var range = (main_string as NSString).rangeOfString(string_to_color)
-    
+    var toggle:Bool! = false
     @IBOutlet weak var numberOfVictims: UITextField!
     
     @IBOutlet weak var commentsTF: UITextView!
     @IBAction func reportDisaster(sender: AnyObject){
-        victimNumbers = (numberOfVictims.text?.componentsSeparatedByString(","))!
-        let username = "\((PFUser.currentUser()?.username)!)"
-        print(username)
-        let newDisaster = Disaster(userName: username, blackVictims: Int(victimNumbers[0])!, redVictims: Int(victimNumbers[1])!, yellowVictims: Int(victimNumbers[2])!, greenVictims: Int(victimNumbers[3])!, levelOfImpact: levelOfImpact, comments: commentsTF.text)
-        newDisaster.location = location
-        newDisaster.saveInBackgroundWithBlock({ (success, error) -> Void in
-            if success {
-                print("Successfully saved Rating for room No:")
-            } else {
-                
-                if let error = error {
-                    print("Something terrible happened. Something like \(error.localizedDescription)")
-                }
-            }
-        })
+        
     }
 
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]){
-        print("hello")
         let location1 = locations.last
         let locationValue = CLLocationCoordinate2D(latitude: (location1?.coordinate.latitude)!, longitude: (location1?.coordinate.longitude)!)
-        print((location1?.coordinate.latitude)!)
         location.append(locationValue.latitude)
         location.append(locationValue.longitude)
+        if location.isEmpty{
+            print("Wait..")
+        }
+        else{
+            locationManager.stopUpdatingLocation()
+        }
     }
   
     
@@ -58,6 +46,7 @@ class RespondViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
@@ -91,7 +80,39 @@ class RespondViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return impactLevel[row]
     }
     
+    @IBAction func uploadImage(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
     
+    // This function tell what should be done once the user is done picking an image. This basically get the image and saves it in the backend to be retrieved later.
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        var imageFile = PFFile(name: "", data: NSData())
+        let imageData = UIImagePNGRepresentation(image!)
+        imageFile = PFFile(name: PFUser.currentUser()?.username!, data: imageData!)
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+        victimNumbers = (numberOfVictims.text?.componentsSeparatedByString(","))!
+        print(location)
+        let username = "\((PFUser.currentUser()?.username)!)"
+        let newDisaster = Disaster(userName: username, blackVictims: Int(victimNumbers[0])!, redVictims: Int(victimNumbers[1])!, yellowVictims: Int(victimNumbers[2])!, greenVictims: Int(victimNumbers[3])!, levelOfImpact: levelOfImpact, comments: commentsTF.text)
+        newDisaster.image = imageFile
+        newDisaster.location = location
+        newDisaster.saveInBackgroundWithBlock({ (success, error) -> Void in
+            if success {
+                print("Success")
+            } else {
+                
+                if let error = error {
+                    print("Something terrible happened. Something like \(error.localizedDescription)")
+                }
+            }
+        })
+    }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         levelOfImpact = impactLevel[row]

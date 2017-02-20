@@ -48,22 +48,25 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
-    //This function will define how much should the screen size be hidden
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            if view.frame.origin.y != 0 {
-               // self.view.frame.origin.y += keyboardSize.height/2
-            }
-            else {
-                
-            }
-        }
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    func getTimestamp() {
+//        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+//    }
+//    
+//    //This function will define how much should the screen size be hidden
+//    func keyboardWillHide(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+//            if view.frame.origin.y != 0 {
+//               // self.view.frame.origin.y += keyboardSize.height/2
+//            }
+//            else {
+//                
+//            }
+//        }
+//    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
 
 //This function will perform a segue upon entering valid username and password
     @IBAction func LoginViewController(sender: AnyObject) {
@@ -71,6 +74,16 @@ class LoginViewController: UIViewController {
             user, error in
             if user != nil {
                 self.performSegueWithIdentifier("LoginSuccessful", sender: self)
+                let user =  PFUser.currentUser()
+                
+                user!["SesionLogin"] = getTimestamp() as! NSDate
+                user!.saveInBackgroundWithBlock({(success,error)->Void in
+                    if error != nil {
+                        print("Something has gone wrong saving in background: \(error)")
+                    } else {
+                        print("Success while saving")
+                    }
+                })
             } else if let error = error {
                 self.displayAlertWithTitle("Login Unsuccessful", message: error.localizedDescription)
             }

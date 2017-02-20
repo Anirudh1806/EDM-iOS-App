@@ -32,10 +32,11 @@ class RegistrationViewController: UIViewController {
     // This function is called once the user taps on the signUp button. This function registers a user
     @IBAction func signUpBTN(sender: AnyObject) {
         let user = PFUser()
-        
+    
         user.username = userNameTF.text!
         user.password = passwordTF.text!
         user.email = emailTF.text!
+        
         
         let image = UIImage(named: "DefaultImage")
        // let imageData = UIImagePNGRepresentation(image!)

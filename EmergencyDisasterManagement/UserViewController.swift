@@ -13,13 +13,16 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBOutlet weak var userFullNameLBL: UILabel!
     @IBOutlet weak var userProfileIV: UIImageView!
+
+    
+    func getTimestamp() {
+        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.userProfileIV.layer.cornerRadius = self.userProfileIV.frame.size.height / 2
         self.userProfileIV.clipsToBounds = true
-        
         self.userProfileIV.layer.borderWidth = 3
         self.userProfileIV.layer.borderColor = UIColor.whiteColor().CGColor
         self.userProfileIV.userInteractionEnabled = true
@@ -41,22 +44,16 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             let image = UIImage(named: "DefaultImage")
             let imageData = UIImagePNGRepresentation(image!)
             let imageFile = PFFile(name: user.username, data: imageData!)
-            
             self.userProfileIV.image = image
-            
             user["image"] = imageFile
-            
             user.saveInBackgroundWithBlock({(success,error)->Void in
-                
                 if error != nil {
                     print("Something has gone wrong saving in background: \(error)")
                 } else {
                     print("Success while saving")
                 }
-                
             })
         }
-        
         // Here we are setting the user full name to the current user's username.
         userFullNameLBL.text = PFUser.currentUser()?.username
     }
@@ -64,11 +61,9 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     //This function will allow user to access gallery and upload a picture
     @IBAction func profilePictureTapped(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
-        
         imagePicker.delegate = self
         imagePicker.sourceType = .PhotoLibrary
         self.presentViewController(imagePicker, animated: true, completion: nil)
-
     }
 
     // This function tell what should be done once the user is done picking an image. This basically get the image and saves it in the backend to be retrieved later.
@@ -76,7 +71,6 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         let imageData = UIImagePNGRepresentation(image!)
         let imageFile = PFFile(name: PFUser.currentUser()?.username!, data: imageData!)
-        
         PFUser.currentUser()?["image"] = imageFile
         PFUser.currentUser()?.saveInBackgroundWithBlock({(success,error) in
             if error != nil {
