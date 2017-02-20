@@ -48,25 +48,25 @@ class LoginViewController: UIViewController {
         }
         
     }
-//    func getTimestamp() {
-//        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-//    }
-//    
-//    //This function will define how much should the screen size be hidden
-//    func keyboardWillHide(notification: NSNotification) {
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-//            if view.frame.origin.y != 0 {
-//               // self.view.frame.origin.y += keyboardSize.height/2
-//            }
-//            else {
-//                
-//            }
-//        }
-//    }
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+    func getTimestamp() {
+        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+    }
+    
+    //This function will define how much should the screen size be hidden
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y != 0 {
+               // self.view.frame.origin.y += keyboardSize.height/2
+            }
+            else {
+                
+            }
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 //This function will perform a segue upon entering valid username and password
     @IBAction func LoginViewController(sender: AnyObject) {
