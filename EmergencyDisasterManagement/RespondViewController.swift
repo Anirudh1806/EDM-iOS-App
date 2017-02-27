@@ -108,6 +108,7 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
                 print("Success")
             } else {
                 
+                
                 if let error = error {
                     print("Something terrible happened. Something like \(error.localizedDescription)")
                 }
