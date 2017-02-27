@@ -39,34 +39,35 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.userProfileIV.layer.borderWidth = 3
         self.userProfileIV.layer.borderColor = UIColor.whiteColor().CGColor
         self.userProfileIV.userInteractionEnabled = true
-        let user = PFUser.currentUser()!
-        if let userImageFile = user["image"] as? PFFile {
-            userImageFile.getDataInBackgroundWithBlock {
-                (imageData: NSData?, error: NSError?) -> Void in
-                if error == nil {
-                    if let imageData = imageData {
-                        self.userProfileIV.image = UIImage(data:imageData)
-                        
-                    }
-                } else {
-                    print("Something has happened: \(error)")
-                }
-            }
-        } else {
-            //This part is to default image when the user doesnot select any.
-            let image = UIImage(named: "DefaultImage")
-            let imageData = UIImagePNGRepresentation(image!)
-            let imageFile = PFFile(name: user.username, data: imageData!)
-            self.userProfileIV.image = image
-            user["image"] = imageFile
-            user.saveInBackgroundWithBlock({(success,error)->Void in
-                if error != nil {
-                    print("Something has gone wrong saving in background: \(error)")
-                } else {
-                    print("Success while saving")
-                }
-            })
-        }
+        
+//        let user = PFUser.currentUser()
+//        if let userImageFile = user["image"] as? PFFile {
+//            userImageFile.getDataInBackgroundWithBlock {
+//                (imageData: NSData?, error: NSError?) -> Void in
+//                if error == nil {
+//                    if let imageData = imageData {
+//                        self.userProfileIV.image = UIImage(data:imageData)
+//                        
+//                    }
+//                } else {
+//                    print("Something has happened: \(error)")
+//                }
+//            }
+//        } else {
+//            //This part is to default image when the user doesnot select any.
+//            let image = UIImage(named: "DefaultImage")
+//            let imageData = UIImagePNGRepresentation(image!)
+//            let imageFile = PFFile(name: user.username, data: imageData!)
+//            self.userProfileIV.image = image
+//            user["image"] = imageFile
+//            user.saveInBackgroundWithBlock({(success,error)->Void in
+//                if error != nil {
+//                    print("Something has gone wrong saving in background: \(error)")
+//                } else {
+//                    print("Success while saving")
+//                }
+//            })
+//        }
         // Here we are setting the user full name to the current user's username.
         userFullNameLBL.text = PFUser.currentUser()?.username
     }

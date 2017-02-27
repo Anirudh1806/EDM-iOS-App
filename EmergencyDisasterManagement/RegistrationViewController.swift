@@ -24,7 +24,9 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var cityTF: UITextField!
     @IBOutlet weak var mobileNumberTF: UITextField!
     @IBOutlet weak var stateTF: UITextField!
+    @IBOutlet weak var certTF: UITextField!
     
+    @IBOutlet weak var professionTF: UITextField!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -36,7 +38,13 @@ class RegistrationViewController: UIViewController {
         user.username = userNameTF.text!
         user.password = passwordTF.text!
         user.email = emailTF.text!
-        
+        user["dob"] = dobTF.text!
+        user["address"] = addressTF.text!
+        user["city"] = cityTF.text!
+        user["mobileNumber"] = mobileNumberTF.text!
+        user["state"] = stateTF.text!
+        user["cert"] = certTF.text!
+        user["profession"] = professionTF.text!
         
         user.signUpInBackgroundWithBlock {
             succeded, error in

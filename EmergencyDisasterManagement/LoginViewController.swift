@@ -74,7 +74,7 @@ class LoginViewController: UIViewController {
     @IBAction func LoginViewController(sender: AnyObject) {
         PFUser.logInWithUsernameInBackground(userNameTF.text!, password: passwordTF.text!) {
             user, error in
-            if user != nil {
+            if user == nil {
                 self.performSegueWithIdentifier("LoginSuccessful", sender: self)
                 self.timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
                 let user =  UserDetails()
