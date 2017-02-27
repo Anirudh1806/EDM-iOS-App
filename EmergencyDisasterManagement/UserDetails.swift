@@ -36,4 +36,5 @@ extension UserDetails : PFSubclassing {
     class func parseClassName() -> String {
         return "UserDetails"
     }
+    
 }
