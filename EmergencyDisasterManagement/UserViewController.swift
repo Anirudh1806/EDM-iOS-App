@@ -37,7 +37,6 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         let backgroundColor = hexStringToUIColor("#F0FFF0")
         self.view.backgroundColor = backgroundColor
-
         
 //        var imageView = UIImageView(frame: CGRectMake(100, 150, 75, 150)); // set as you want
 //        var image = UIImage(named: "DefaultImage");
