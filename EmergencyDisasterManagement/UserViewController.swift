@@ -42,6 +42,7 @@ class UserViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 //        var image = UIImage(named: "DefaultImage");
 //        imageView.image = image;
 //        self.view.addSubview(imageView);
+        
         // Do any additional setup after loading the view.
 //        self.userProfileIV.frame = CGRectMake(100, 150, 150, 150)
 //        self.userProfileIV.layer.cornerRadius = self.userProfileIV.frame.size.height / 2
