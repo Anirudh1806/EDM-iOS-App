@@ -13,12 +13,13 @@ import CoreLocation
 class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
-    let impactLevel:[String] = ["Low", "Medium","High"]
+    let impactLevel:[String] = ["Low","Medim","High"]
     let changeColor = "Black,Red,Yellow,Green"
-    var victimNumbers:[String] = ["11","12","13","14"]
-    var levelOfImpact:String = ""
+    var victimNumbers:[String] = []
+    var levelOfImpact:String = "low"
     var location:[Double] = []
-    var toggle:Bool! = false
+    var mapsClicked:Bool! = false
+    var uploadClicked:Bool = false
     @IBOutlet weak var numberOfVictims: UITextField!
     
     @IBOutlet weak var commentsTF: UITextView!
@@ -46,15 +47,25 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let backgroundColor = hexStringToUIColor("#F0FFF0")
+        self.view.backgroundColor = backgroundColor
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
 
     @IBAction func allowMaps(sender: AnyObject) {
         //locationManager()
+        mapsClicked = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -82,6 +93,7 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     @IBAction func uploadImage(sender: AnyObject) {
+        uploadClicked = true
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .PhotoLibrary
@@ -107,8 +119,6 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
             if success {
                 print("Success")
             } else {
-                
-                
                 if let error = error {
                     print("Something terrible happened. Something like \(error.localizedDescription)")
                 }
@@ -119,6 +129,30 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
     {
         levelOfImpact = impactLevel[row]
         
+    }
+    @IBAction func submitBTN(sender: AnyObject) {
+        if numberOfVictims.text! == "" || (numberOfVictims.text?.componentsSeparatedByString(","))!.count != 4 {
+            displayAlertWithTitle1("Enter number of victims",message: "Enter number of victims in following order black.red,yellow,green")
+        }
+        else {
+            
+            if mapsClicked == false {
+                displayAlertWithTitle1("Allow Maps",message:"Please click on allows maps button to access location")
+            }
+            else {
+                if uploadClicked == false {
+                    displayAlertWithTitle1("Upload image", message: "Location image should be uploaded")
+                }
+                else{
+                    if commentsTF.text! == "" {
+                        displayAlertWithTitle1("Enter comments", message: "Comments cannot be nil")
+                    }
+                    else{
+                        displayAlertWithTitle1("Report sent succuessfully", message: "")
+                    }
+                }
+            }
+        }
     }
     // Function that displays an Alert Message with the passed in title and message
     func displayAlertWithTitle(title:String, message:String){
@@ -139,5 +173,34 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
         alert.addAction(defaultAction)
         self.presentViewController(alert, animated: true, completion: nil)
         
+    }
+    
+    func displayAlertWithTitle1(title:String, message:String){
+        let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let defaultAction:UIAlertAction =  UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }
