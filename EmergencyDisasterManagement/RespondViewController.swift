@@ -35,6 +35,7 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
         if location.isEmpty{
             print("Wait..")
         }
+        
         else{
             locationManager.stopUpdatingLocation()
         }
