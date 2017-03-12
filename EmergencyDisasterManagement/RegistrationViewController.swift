@@ -131,7 +131,7 @@ class RegistrationViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
         
     }
-    
+    // Function that displays an Alert Message with the passed in title and message.
     func displayAlertWithTitle1(title:String, message:String){
         let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in

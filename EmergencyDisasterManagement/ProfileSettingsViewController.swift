@@ -33,7 +33,8 @@ class ProfileSettingsViewController: UIViewController {
         do{
             var obj = try volunteer.findObjects()
             for object in obj {
-                //print(obj)
+                print(obj)
+                
                 passwordTF.text = object["password"]! as! String
                 addressTF.text = object["address"]! as! String
                 professionTF.text = object["profession"]! as! String
