@@ -48,7 +48,6 @@ class ViewController: UIViewController {
         if (cString.hasPrefix("#")) {
             cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
         }
-        
         if ((cString.characters.count) != 6) {
             return UIColor.grayColor()
         }
