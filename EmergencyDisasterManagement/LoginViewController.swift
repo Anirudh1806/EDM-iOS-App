@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
