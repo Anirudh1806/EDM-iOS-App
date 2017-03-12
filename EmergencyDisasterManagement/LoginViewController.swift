@@ -10,6 +10,7 @@ import UIKit
 import Parse
 class LoginViewController: UIViewController {
 
+    
     var timestamp:String!
     //This is an outlet for the username Textfield.
     @IBOutlet weak var userNameTF: UITextField!
