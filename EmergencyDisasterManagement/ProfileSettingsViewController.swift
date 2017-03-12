@@ -48,7 +48,6 @@ class ProfileSettingsViewController: UIViewController {
         catch{
             print("Volunteer not found")
         }
-       
         
     }
     
