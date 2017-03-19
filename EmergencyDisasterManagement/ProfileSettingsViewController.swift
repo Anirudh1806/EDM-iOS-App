@@ -129,6 +129,7 @@ class ProfileSettingsViewController: UIViewController {
                             object["state"] = stateTF.text!
                             object["mobileNumber"] = mobileTF.text!
                             do {
+                                displayAlertWithTitle("Successfully updated", message: "")
                                 try object.save()
                             }
                             catch {
