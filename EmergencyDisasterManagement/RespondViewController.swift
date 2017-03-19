@@ -172,7 +172,6 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
         let defaultAction:UIAlertAction =  UIAlertAction(title: "OK", style: .Default, handler: nil)
         alert.addAction(defaultAction)
         self.presentViewController(alert, animated: true, completion: nil)
-        
     }
     
     func displayAlertWithTitle1(title:String, message:String){
