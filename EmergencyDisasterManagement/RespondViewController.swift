@@ -168,7 +168,6 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
 
         let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         alert.setValue(attributedString1, forKey: "attributedTitle")
-        
 
         let defaultAction:UIAlertAction =  UIAlertAction(title: "OK", style: .Default, handler: nil)
         alert.addAction(defaultAction)
