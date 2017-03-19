@@ -147,6 +147,7 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
                 else{
                     if commentsTF.text! == "" {
                         displayAlertWithTitle1("Enter comments", message: "Comments cannot be nil")
+                        
                     }
                     else{
                         displayAlertWithTitle1("Report sent succuessfully", message: "")
