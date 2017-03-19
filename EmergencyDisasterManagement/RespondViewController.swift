@@ -133,7 +133,7 @@ class RespondViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     @IBAction func submitBTN(sender: AnyObject) {
         if numberOfVictims.text! == "" || (numberOfVictims.text?.componentsSeparatedByString(","))!.count != 4 {
-            displayAlertWithTitle1("Enter number of victims",message: "Enter number of victims in following order black.red,yellow,green")
+            displayAlertWithTitle1("Enter number of victims",message: "Enter number of victims in following order black,red,yellow,green")
         }
         else {
             
